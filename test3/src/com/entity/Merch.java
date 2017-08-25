@@ -1,0 +1,74 @@
+package com.entity;
+
+public class Merch {
+	
+	private Integer id;
+	
+public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+private String name;
+	
+	private String cade;
+	
+	private String factory;
+	
+	private String packages;
+	
+	private Double price;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Double getPrice() {
+		return price;
+	}
+
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+
+	public String getCade() {
+		return cade;
+	}
+
+	public void setCade(String cade) {
+		this.cade = cade;
+	}
+
+	public String getFactory() {
+		return factory;
+	}
+
+	public void setFactory(String factory) {
+		this.factory = factory;
+	}
+
+	public String getPackages() {
+		return packages;
+	}
+
+	public void setPackages(String packages) {
+		this.packages = packages;
+	}
+
+	
+
+	@Override
+	public String toString() {
+		return "Merch [name=" + name + ", cade=" + cade + ", factory=" + factory + ", packages=" + packages + ", price="
+				+ price + "]";
+	}
+	
+
+}
