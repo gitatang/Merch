@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.MerchDao"> 
+<resultMap type="com.entity.Merch" id="MerchId">
+
+<id column="id" property="id"/>
+<result column="name" property="name"/>
+	<result column="cade" property="cade"/>
+	<result column="factory" property="factory"/>
+	<result column="packages" property="packages"/>
+	<result column="price" property="price"/>
+	<collection property="list" ofType="com.entity.Emp">
+	<result column="eid" property="eid"/>
+	<result column="ename" property="ename"/>
+	</collection>
+</resultMap>
+<select id="get" parameterType="com.entity.Emp" resultMap="MerchId">
+select name,cade,eid,ename from merch
+left join emp 
+on merch.id=emp.eid
+where eid = #{eid}
+</select>
+
+</mapper>
